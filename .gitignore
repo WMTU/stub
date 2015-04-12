@@ -17,5 +17,5 @@
 /tmp
 
 # Config files
-config/database.yml
-config/stub-config.yaml
+/config/database.yml
+/config/stub-config.yml
