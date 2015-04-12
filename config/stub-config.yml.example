@@ -1,0 +1,23 @@
+development:
+  rabbit_mq:
+    host:
+    port:
+    user:
+    pass:
+    vhost:
+
+test:
+  rabbit_mq:
+    host:
+    port:
+    user:
+    pass:
+    vhost:
+
+production:
+  rabbit_mq:
+    host:
+    port:
+    user:
+    pass:
+    vhost:
