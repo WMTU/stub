@@ -1,4 +1,24 @@
 Rails.application.routes.draw do
+  get 'tickets/index'
+
+  namespace :api do
+  get 'tickets/band'
+  end
+
+  namespace :api do
+  get 'tickets/dj'
+  end
+
+  namespace :api do
+  get 'tickets/both'
+  end
+
+  get 'sessions/new'
+
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
