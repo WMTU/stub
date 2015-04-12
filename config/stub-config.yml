@@ -1,10 +1,10 @@
 development:
   rabbit_mq:
-    host:
-    port:
-    user:
-    pass:
-    vhost:
+    host: localhost
+    port: 5672
+    user: stub
+    pass: stub
+    vhost: stub
 
 test:
   rabbit_mq:
