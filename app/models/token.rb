@@ -6,7 +6,7 @@ class Token < ActiveRecord::Base
 
   def generate_token
     begin
-      self.hash = SecureRandom.hex
-    end while self.class.exists?(hash: token)
+      self.key = SecureRandom.hex
+    end while self.class.exists?(key: key)
   end
 end

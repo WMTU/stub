@@ -6,6 +6,6 @@ class Ticket < ActiveRecord::Base
   def generate_hash
     begin
       self.hash = SecureRandom.hex
-    end while self.class.exists?(hash: token)
+    end while self.class.exists?(uuid: uuid)
   end
 end

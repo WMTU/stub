@@ -2,6 +2,7 @@ module TokenAuth
   included do
     before_filter :authorize
     protect_from_forgery with: :null_session
+    attr_reader :token
   end
 
   def authorize
@@ -10,7 +11,7 @@ module TokenAuth
 
   def authorize_token
     authenticate_with_http_token do |token|
-      Token.where(hash: token).limit(1).length > 0
+      @token ||= Token.find_by_key token
     end
   end
 

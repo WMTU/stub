@@ -1,4 +1,6 @@
-class Api::TicketsController < ApplicationController
+class Api::TicketsController < ApiController
+  include RabbitMq
+
   def band
   end
 
