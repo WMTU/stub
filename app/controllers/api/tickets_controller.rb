@@ -2,14 +2,14 @@ class Api::TicketsController < ApiController
   include RabbitMq
 
   def band
-    head :no_content
+    render inline: File.open('./zpls/band-night.zpl').read
   end
 
   def dj
-    head :no_content
+    render inline: File.open('./zpls/dj-night.zpl').read
   end
 
   def both
-    head :no_content
+    render inline: File.open('./zpls/both-night.zpl').read
   end
 end
