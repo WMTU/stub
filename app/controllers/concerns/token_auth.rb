@@ -1,7 +1,9 @@
 module TokenAuth
+  extend ActiveSupport::Concern
+  
   included do
-    before_filter :authorize
     protect_from_forgery with: :null_session
+    before_filter :authorize
     attr_reader :token
   end
 

@@ -1,6 +1,8 @@
 module RabbitMq
+  extend ActiveSupport::Concern
+
   included do
-    after_action :clsoe_channel
+    after_action :close_channel
   end
 
   def mq_channel
