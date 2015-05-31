@@ -1,3 +1,82 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#login {
+  #login-form {
+    background-color: #ddd;
+
+    border-radius: .25rem;
+
+    color: rgba(0, 0, 0, .6);
+
+    margin: 0 auto;
+    margin-top: 10rem;
+
+    padding: 1.25rem 1rem;
+
+    text-align: center;
+
+    width: 18rem;
+
+    h1 {
+      margin: 1.75rem 0;
+    }
+
+    input {
+      background-color: #fff;
+
+      border: 0;
+
+      border-radius: .25rem;
+
+      font-size: 1rem;
+
+      height: 2rem;
+
+      margin-bottom: .75rem;
+
+      line-height: 1rem;
+
+      outline: 0;
+
+      padding: .5rem;
+
+      width: 80%;
+
+      &[type=submit] {
+        background-color: #fff;
+
+        color: rgba(0, 0, 0, .6);
+
+        &:hover {
+          background-color: #eee
+        }
+
+        &:active {
+          background-color: #ccc;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  #notifications {
+    width: 18rem;
+    margin: 1rem auto;
+    text-align: center;
+
+    div.alert {
+      padding: .25rem;
+      border-radius: .25rem;
+      border: 2px #ccc solid;
+    }
+
+    div.alert.alert-alert {
+      border: 2px rgba(#FF4136, .9) solid;
+    }
+
+    div.alert.alert-notice {
+      border: 2px rgba(#0074D9, .9) solid;
+    }
+  }
+}

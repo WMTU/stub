@@ -50,3 +50,6 @@ gem 'responders', '~> 2.1.0'
 
 # RabbitMQ for printing
 gem 'bunny', '~> 1.7.0'
+
+# Chartkick for charting database
+gem 'chartkick', '~> 1.3.2'

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'tickets#index'
+  root to: 'tickets#stats'
 
   get 'tickets/index'
 

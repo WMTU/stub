@@ -4,11 +4,24 @@
   <title>Stub</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+  <header>
+    <span class="brand"><h1>Stub</h1></span>
+    <span class="nav-link"><%= link_to 'Stats', root_path %></span>
+    <span><%= link_to 'Logout', sessions_path, method: :delete%></span>
+  </header>
+
+  <main>
+    <%= yield %>
+  </main>
+
+  <footer>
+
+  </footer>
 
 </body>
 </html>
