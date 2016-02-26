@@ -19,3 +19,4 @@
 # Config files
 /config/database.yml
 /config/stub-config.yml
+/config/secrets.yml
