@@ -11,14 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150412193124) do
+ActiveRecord::Schema.define(version: 20160227041721) do
 
-  create_table "tickets", force: :cascade do |t|
-    t.string   "uuid"
-    t.string   "type"
+  create_table "events", force: :cascade do |t|
+    t.date     "start_date"
+    t.date     "end_date"
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "ticket_types", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "event_id"
+    t.text     "zpl"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "ticket_types", ["event_id"], name: "index_ticket_types_on_event_id"
+
+  create_table "tickets", force: :cascade do |t|
+    t.string   "uuid"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "ticket_type_id"
+  end
+
+  add_index "tickets", ["ticket_type_id"], name: "index_tickets_on_ticket_type_id"
 
   create_table "tokens", force: :cascade do |t|
     t.string   "key"
