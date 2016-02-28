@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get 'tickets/index'
 
-  resources :event do
+  resources :events do
     resources :ticket_types
   end
 

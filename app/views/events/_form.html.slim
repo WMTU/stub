@@ -1,0 +1,16 @@
+= form_for @event do |f|
+  - if @event.errors.any?
+    div.error
+      h2 = "#{pluralize(@event.errors.count, "error")} prohibited this asset from being saved:"
+      ul
+        - @event.errors.full_messages.each do |message|
+          li = message
+  div.field
+    = f.label :name
+    = f.text_field :name, placeholder: 'Event Name'
+  div.field
+    = f.label :start_date
+    = f.date_select :start_date
+  div.field
+    = f.label :end_date
+    = f.date_select :end_date

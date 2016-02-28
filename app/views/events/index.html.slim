@@ -1,0 +1,22 @@
+h1
+  | Events
+section
+  button
+    = link_to 'New Event', new_event_path
+section
+  table
+    thead
+      tr
+        th Name
+        th Start Date
+        th Stop Date
+    tbody
+      -@events.each do |event|
+        tr
+          td
+            = event.name
+          td
+            = event.start_date
+          td
+            = event.stop_date
+    
