@@ -2,14 +2,10 @@
 <div class="last_year">
   <h2>Last Year Totals</h2>
   <div class="graphs">
-    <%= pie_chart @ly_types %>
-    <%= bar_chart @ly_types.merge 'total': @ly_total %>
   </div>
 </div>
 <div class="totals">
   <h2>Totals</h2>
   <div class="graphs">
-    <%= pie_chart @all_types %>
-    <%= bar_chart @all_types.merge 'total': @all_total %>
   </div>
 </div>

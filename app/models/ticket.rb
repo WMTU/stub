@@ -1,4 +1,5 @@
 class Ticket < ActiveRecord::Base
+  belongs_to :ticket_type
   before_create :generate_hash
   self.inheritance_column = :na
 

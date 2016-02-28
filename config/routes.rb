@@ -3,6 +3,10 @@ Rails.application.routes.draw do
 
   get 'tickets/index'
 
+  resources :event do
+    resources :ticket_types
+  end
+
   resource :sessions, only: [:new, :create, :destroy]
 
   namespace :api do
