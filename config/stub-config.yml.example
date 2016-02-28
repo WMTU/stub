@@ -1,9 +1,9 @@
 development:
   rabbit_mq:
-    host:
-    port:
-    user:
-    pass:
+    host: localhost
+    port: 5672
+    user: guest
+    pass: guest
     vhost:
 
 test:
