@@ -14,9 +14,9 @@ section
       -@events.each do |event|
         tr
           td
-            = event.name
+            = link_to event.name, event_path(event)
           td
             = event.start_date
           td
-            = event.stop_date
+            = event.end_date
     

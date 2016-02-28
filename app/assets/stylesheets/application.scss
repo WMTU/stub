@@ -76,25 +76,45 @@ header {
     margin-bottom: 0;
     margin-top: 0;
   }
+
+  a {
+    &:hover {
+      background-color: #bbb;
+      color: #fff;
+    }
+  }
 }
 
 a {
   text-decoration: none;
-  color: #444;
+  color: #000;
   padding: .25em;
 
   font-size: 1.25rem;
 
   &:visited {
-    color: #444;
+    color: #000;
   }
 
   &:hover {
-    color: #fff;
-    background-color: #bbb;
+    color: #000;
   }
 }
 
 section {
   margin-top: 1rem;
+}
+
+button, input[type=submit] {
+  background: none;
+  border: solid 2px #000;
+  border-radius: 10rem;
+  font-size: 1rem;
+  padding: .5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  &:hover {
+    border-color: #888;
+  }
 }
